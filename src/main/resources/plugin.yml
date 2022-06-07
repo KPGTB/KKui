@@ -1,0 +1,7 @@
+name: ${project.artifactId}
+version: ${project.version}
+main: io.github.kpgtb.kkui.KKui
+depend: [ KKcore, ProtocolLib ]
+authors: [ KPG-TB ]
+description: This is API for KK plugins. With this API you can add custom UI.
+website: kpgtb.github.io

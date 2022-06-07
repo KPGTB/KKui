@@ -1,0 +1,8 @@
+resourcePack: ""
+basicActionBarDuration: 60 # In ticks 20 ticks = 1 second
+actionBarRefreshRate: 20 # In ticks 20 ticks = 1 second
+
+customFontWidth:
+  "\uA001": 8
+  "\uA002": 8
+  "\uA003": 8
