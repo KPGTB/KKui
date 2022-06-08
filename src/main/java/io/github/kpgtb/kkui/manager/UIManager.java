@@ -75,7 +75,6 @@ public class UIManager {
 
         ui.replace(uuid, uis);
     }
-
     public void removeUI(UUID uuid, BaseUI baseUI) {
         if(!ui.containsKey(uuid)) {
             ui.put(uuid, new ArrayList<>());
@@ -104,7 +103,6 @@ public class UIManager {
             }
         }.runTaskLater(plugin, time);
     }
-
     public void removeActionBar(UUID uuid, String text) {
         if(!standardActionBars.containsKey(uuid)) {
             standardActionBars.put(uuid, new ArrayList<>());
@@ -114,5 +112,21 @@ public class UIManager {
         actionbars.remove(text);
 
         standardActionBars.replace(uuid, actionbars);
+    }
+
+    public ArrayList<BaseUI> getUI(UUID uuid) {
+        if(!ui.containsKey(uuid)) {
+            return new ArrayList<>();
+        }
+
+        return ui.get(uuid);
+    }
+
+    public ArrayList<String> getStandardActionBars(UUID uuid) {
+        if(!standardActionBars.containsKey(uuid)) {
+            return new ArrayList<>();
+        }
+
+        return standardActionBars.get(uuid);
     }
 }

@@ -41,7 +41,6 @@ public final class KKui extends JavaPlugin {
     @Override
     public void onDisable() {
         messageUtil.sendInfoToConsole("Disabling plugin KKui created by KPG-TB");
-        packetSendingListener.disable();
     }
 
     public static UIManager getUiManager() {
