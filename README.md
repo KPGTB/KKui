@@ -1,6 +1,6 @@
 # KKui
 
-[![JitPack](https://jitpack.io/v/KPGTB/KKcore.svg)](https://jitpack.io/#KPGTB/KKcore)
+[![JitPack](https://jitpack.io/v/KPGTB/KKui.svg)](https://jitpack.io/#KPGTB/KKui)
 ![Spigot](https://img.shields.io/badge/Spigot-1.13--1.18-yellow)
 ![License](https://img.shields.io/badge/License-Apache%202.0-orange)
 ![Author](https://img.shields.io/badge/Author-KPG--TB-green)
