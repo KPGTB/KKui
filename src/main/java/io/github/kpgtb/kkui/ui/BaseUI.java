@@ -5,7 +5,6 @@ public class BaseUI {
     private String text;
     private final Alignment alignment;
     private final int offset;
-    private int width;
 
     private String textToShow;
 
@@ -26,7 +25,6 @@ public class BaseUI {
         String leftPixelsChar = pixels[0] < 0 ? "\uF801" : "\uF821";
         String rightPixelsChar = pixels[1] < 0 ? "\uF801" : "\uF821";
 
-
         for(int i = 0; i < Math.abs(pixels[0]); i++) {
             finalText = leftPixelsChar + finalText;
         }
@@ -43,6 +41,7 @@ public class BaseUI {
     }
 
     private Integer[] getLeftAndRightPixels() {
+        int width = 0;
         for(Character character : text.toCharArray()) {
             width += FontWidth.getWidth(character);
         }

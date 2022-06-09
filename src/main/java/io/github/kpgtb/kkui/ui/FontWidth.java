@@ -35,6 +35,37 @@ public class FontWidth {
         customWidths.put('@',7 );
         customWidths.put('~', 7);
 
+        customWidths.put('\uF801', -1);
+        customWidths.put('\uF802', -2);
+        customWidths.put('\uF803', -3);
+        customWidths.put('\uF804', -4);
+        customWidths.put('\uF805', -5);
+        customWidths.put('\uF806', -6);
+        customWidths.put('\uF807', -7);
+        customWidths.put('\uF808', -8);
+        customWidths.put('\uF809', -16);
+        customWidths.put('\uF80A', -32);
+        customWidths.put('\uF80B', -64);
+        customWidths.put('\uF80C', -128);
+        customWidths.put('\uF80D', -256);
+        customWidths.put('\uF80E', -512);
+        customWidths.put('\uF80F', -1024);
+
+        customWidths.put('\uF821', 1);
+        customWidths.put('\uF822', 2);
+        customWidths.put('\uF823', 3);
+        customWidths.put('\uF824', 4);
+        customWidths.put('\uF825', 5);
+        customWidths.put('\uF826', 6);
+        customWidths.put('\uF827', 7);
+        customWidths.put('\uF828', 8);
+        customWidths.put('\uF829', 16);
+        customWidths.put('\uF82A', 32);
+        customWidths.put('\uF82B', 64);
+        customWidths.put('\uF82C', 128);
+        customWidths.put('\uF82D', 256);
+        customWidths.put('\uF82E', 512);
+        customWidths.put('\uF82F', 1024);
 
         for(String key : config.getConfigurationSection("customFontWidth").getKeys(false)) {
             customWidths.put(key.charAt(0), config.getInt("customFontWidth."+key));
