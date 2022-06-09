@@ -3,4 +3,4 @@ basicActionBarDuration: 60 # In ticks 20 ticks = 1 second
 actionBarRefreshRate: 20 # In ticks 20 ticks = 1 second
 
 customFontWidth:
-  "\uA001": 8
+  "\uF999": 0
