@@ -36,7 +36,7 @@ public class BaseUI {
         textToShow = finalText;
     }
 
-    private void update(String text) {
+    public void update(String text) {
         this.text = text;
         build();
     }
