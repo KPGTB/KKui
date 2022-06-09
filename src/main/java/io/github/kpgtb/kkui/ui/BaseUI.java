@@ -26,10 +26,11 @@ public class BaseUI {
         String leftPixelsChar = pixels[0] < 0 ? "\uF801" : "\uF821";
         String rightPixelsChar = pixels[1] < 0 ? "\uF801" : "\uF821";
 
-        for(int i = 0; i < pixels[0]; i++) {
+
+        for(int i = 0; i < Math.abs(pixels[0]); i++) {
             finalText = leftPixelsChar + finalText;
         }
-        for(int i = 0; i < pixels[1]; i++) {
+        for(int i = 0; i < Math.abs(pixels[1]); i++) {
             finalText = finalText + rightPixelsChar;
         }
 
