@@ -41,6 +41,14 @@ public class FontWidth {
         }
     }
 
+    public static void registerCustomChar(Character character, int width) {
+        if(customWidths.containsKey(character)) {
+            customWidths.remove(character);
+        }
+
+        customWidths.put(character, width);
+    }
+
     public static Integer getWidth(Character character) {
         return customWidths.getOrDefault(character, 6);
     }

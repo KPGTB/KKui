@@ -24,7 +24,6 @@ public final class KKui extends JavaPlugin {
         messageUtil.sendInfoToConsole("Enabling plugin KKui created by KPG-TB");
 
         FontWidth.initWidth(getConfig());
-
         uiManager = new UIManager(this);
 
         ProtocolManager protocolManager = ProtocolLibrary.getProtocolManager();
