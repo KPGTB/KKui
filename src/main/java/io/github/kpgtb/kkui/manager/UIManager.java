@@ -127,4 +127,12 @@ public class UIManager {
 
         return standardActionBars.get(uuid);
     }
+
+    public void removeAllUI(UUID uuid) {
+        ui.remove(uuid);
+    }
+
+    public void removeAllActionBars(UUID uuid) {
+        standardActionBars.remove(uuid);
+    }
 }

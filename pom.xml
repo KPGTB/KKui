@@ -81,7 +81,7 @@
         <dependency>
             <groupId>com.github.KPGTB</groupId>
             <artifactId>KKcore</artifactId>
-            <version>main-4718a5832c-1</version>
+            <version>main-e77a9a4a9e-1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
