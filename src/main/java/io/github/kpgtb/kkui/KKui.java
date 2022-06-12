@@ -13,7 +13,6 @@ import org.bukkit.plugin.java.JavaPlugin;
 public final class KKui extends JavaPlugin {
 
     private MessageUtil messageUtil;
-    private PacketSendingListener packetSendingListener;
     private static UIManager uiManager;
 
     @Override
@@ -27,7 +26,7 @@ public final class KKui extends JavaPlugin {
         uiManager = new UIManager(this);
 
         ProtocolManager protocolManager = ProtocolLibrary.getProtocolManager();
-        packetSendingListener = new PacketSendingListener(this, protocolManager);
+        new PacketSendingListener(this, protocolManager);
 
         ListenerManager listenerManager = new ListenerManager(
                 getFile(),

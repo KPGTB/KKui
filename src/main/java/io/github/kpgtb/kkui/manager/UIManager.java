@@ -79,7 +79,6 @@ public class UIManager {
         if(!ui.containsKey(uuid)) {
             ui.put(uuid, new ArrayList<>());
         }
-
         ArrayList<BaseUI> uis = ui.get(uuid);
         uis.remove(baseUI);
 
@@ -121,7 +120,6 @@ public class UIManager {
 
         return ui.get(uuid);
     }
-
     public ArrayList<String> getStandardActionBars(UUID uuid) {
         if(!standardActionBars.containsKey(uuid)) {
             return new ArrayList<>();
