@@ -26,6 +26,7 @@ public class FontWidth {
     public static void initWidth(FileConfiguration config) {
         customWidths.put(' ', 4);
         customWidths.put('f', 5);
+        customWidths.put('t', 4);
         customWidths.put('i', 2);
         customWidths.put('k', 5);
         customWidths.put('l', 3);

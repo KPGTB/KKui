@@ -55,6 +55,7 @@ public class PacketSendingListener {
                     ComponentSerializer.parse(event.getPacket().getChatComponents().read(0).getJson())[0].toLegacyText(),
                     plugin.getConfig().getInt("basicActionBarDuration")
                 );
+
             event.setCancelled(true);
         }
     }
