@@ -1,4 +1,4 @@
-resourcePack: "https://download1482.mediafire.com/0svvcwnt82tg/hs3bf31s4ycm815/NegativeSpaceFont4pre3.zip"
+resourcePack: "https://download1482.mediafire.com/0svvcwnt82tg/hs3bf31s4ycm815/NegativeSpaceFont4pre3.zip" # If you don;t want to load resourcepack from this plugin, set resourcePack to ""
 basicActionBarDuration: 60 # In ticks 20 ticks = 1 second
 actionBarRefreshRate: 20 # In ticks 20 ticks = 1 second
 
