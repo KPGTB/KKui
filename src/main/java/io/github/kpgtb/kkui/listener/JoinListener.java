@@ -17,11 +17,7 @@
 package io.github.kpgtb.kkui.listener;
 
 import io.github.kpgtb.kkcore.manager.UsefulObjects;
-import io.github.kpgtb.kkui.KKui;
 import io.github.kpgtb.kkui.UiUsefulObjects;
-import io.github.kpgtb.kkui.ui.Alignment;
-import io.github.kpgtb.kkui.ui.BaseUI;
-import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

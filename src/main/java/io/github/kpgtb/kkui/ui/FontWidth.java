@@ -21,7 +21,7 @@ import org.bukkit.configuration.file.FileConfiguration;
 import java.util.HashMap;
 
 public class FontWidth {
-    public static HashMap<Character, Integer> customWidths = new HashMap<>();
+    public static final HashMap<Character, Integer> customWidths = new HashMap<>();
 
     public static void initWidth(FileConfiguration config) {
         customWidths.put(' ', 4);
