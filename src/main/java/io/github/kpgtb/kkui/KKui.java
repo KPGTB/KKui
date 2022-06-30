@@ -18,6 +18,7 @@ package io.github.kpgtb.kkui;
 
 import com.comphenix.protocol.ProtocolLibrary;
 import com.comphenix.protocol.ProtocolManager;
+import com.google.gson.JsonParser;
 import io.github.kpgtb.kkcore.manager.listener.ListenerManager;
 import io.github.kpgtb.kkcore.util.MessageUtil;
 import io.github.kpgtb.kkui.manager.UIManager;
@@ -37,7 +38,7 @@ public final class KKui extends JavaPlugin {
 
         messageUtil.sendInfoToConsole("Enabling plugin KKui created by KPG-TB");
 
-        FontWidth.initWidth(getConfig());
+        FontWidth.initWidth(getConfig(),  new JsonParser().parse(getTextResource("spaces.json")));
         uiManager = new UIManager(this);
 
         ProtocolManager protocolManager = ProtocolLibrary.getProtocolManager();

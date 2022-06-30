@@ -41,7 +41,7 @@ public class BaseUI {
     private void build() {
         Integer[] pixels = getLeftAndRightPixels();
 
-        String finalText = text;
+        /*String finalText = text;
 
         String leftPixelsChar = pixels[0] < 0 ? "\uF801" : "\uF821";
         String rightPixelsChar = pixels[1] < 0 ? "\uF801" : "\uF821";
@@ -53,7 +53,8 @@ public class BaseUI {
             finalText = finalText + rightPixelsChar;
         }
 
-        textToShow = finalText;
+        textToShow = finalText;*/
+        textToShow = FontWidth.getSpaces(pixels[0]) + text + FontWidth.getSpaces(pixels[1]);
     }
 
     public void update(String text) {

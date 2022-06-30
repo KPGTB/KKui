@@ -16,14 +16,16 @@
 
 package io.github.kpgtb.kkui.ui;
 
+import com.google.gson.JsonElement;
 import org.bukkit.configuration.file.FileConfiguration;
 
 import java.util.HashMap;
 
 public class FontWidth {
     public static final HashMap<Character, Integer> customWidths = new HashMap<>();
+    private static JsonElement spacesJson;
 
-    public static void initWidth(FileConfiguration config) {
+    public static void initWidth(FileConfiguration config, JsonElement spaces) {
         customWidths.put(' ', 4);
         customWidths.put('f', 5);
         customWidths.put('t', 4);
@@ -87,6 +89,8 @@ public class FontWidth {
         for(String key : config.getConfigurationSection("customFontWidth").getKeys(false)) {
             customWidths.put(key.charAt(0), config.getInt("customFontWidth."+key));
         }
+
+        spacesJson = spaces;
     }
 
     public static void registerCustomChar(Character character, int width) {
@@ -99,5 +103,29 @@ public class FontWidth {
 
     public static Integer getWidth(Character character) {
         return customWidths.getOrDefault(character, 6);
+    }
+
+    public static String getSpaces(int spaces) {
+
+        if(spaces > 1024 || spaces < -1024) {
+            StringBuilder builder = new StringBuilder();
+            int full = Math.floorDiv(spaces, 1024);
+            int other = spaces % 1024;
+
+            if(full > 0) {
+                for (int i = 0; i < full; i++) {
+                    builder.append(spacesJson.getAsJsonObject().get("space.1024").getAsString().replace("%s", ""));
+                }
+            } else {
+                for (int i = 0; i < Math.abs(full); i++) {
+                    builder.append(spacesJson.getAsJsonObject().get("space.-1024").getAsString().replace("%s", ""));
+                }
+            }
+            builder.append(spacesJson.getAsJsonObject().get("space."+other).getAsString().replace("%s", ""));
+
+            return builder.toString();
+        }
+
+        return spacesJson.getAsJsonObject().get("space."+spaces).getAsString().replace("%s", "");
     }
 }
